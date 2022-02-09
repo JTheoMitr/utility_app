@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Première application</string>
+    <string name="enter_pw">Entrez le mot de passe</string>
+    <string name="enter_name">Entrez le nom</string>
+    <string name="login">Connectez-vous</string>
+</resources>
