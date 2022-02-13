@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import static com.example.firstapp.R.layout.activity_calculator;
 import static com.example.firstapp.R.layout.calculator;
 
 import androidx.annotation.Nullable;
@@ -36,14 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
 
     public void clickHandler(View view) {
         switch (view.getId()){
-            case R.id.button:
+            case R.id.login_button:
                 startHome();
                 break;
             case R.id.btnAlarm:
                 createAlarm("midnight",00,49);
                 break;
             case R.id.calculator_button:
-                setContentView(calculator);
+                startCalculator();
                 break;
         }
         // startHome();
@@ -72,9 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         startActivityForResult(hIntent,123); //step 1
         Log.i(TAG, "starting homeactivity");
     }
-    //because in whatsapp chat.. you can go to fetch a contact/photo, location
-    //the point of return is same ie onActivityResult how do i differentiate which data you're getting
-    //that differentiation is made using the request
+
+    private void startCalculator() {
+
+        Intent hIntent = new Intent(this, CalculatorActivity.class); //explicit intent
+        startActivityForResult(hIntent,123);
+        Log.i(TAG, "starting calculator activity");
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {  //dataIntent
         super.onActivityResult(requestCode, resultCode, data);
