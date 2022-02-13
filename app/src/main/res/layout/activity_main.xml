@@ -9,34 +9,48 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/etName"
+<!--    <EditText-->
+<!--        android:id="@+id/etName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="66dp"-->
+<!--        android:background="#AC9595"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/enter_name"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etPass"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:background="@drawable/ic_launcher_background"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/enter_pw"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:minHeight="48dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etName" />-->
+
+    <TextView
+        android:id="@+id/tvMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="66dp"
-        android:background="#AC9595"
-        android:ems="10"
-        android:hint="@string/enter_name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:text="Welcome"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/ic_launcher_background"
-        android:ems="10"
-        android:hint="@string/enter_pw"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <Button
         android:id="@+id/button"
@@ -48,23 +62,11 @@
         android:background="@drawable/ic_baseline_apps_24_light"
         android:onClick="clickHandler"
         android:text="@string/login"
-        app:layout_constraintBottom_toTopOf="@+id/btnAlarm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMain"
+        app:rippleColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/tvMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#000000"
-        android:text="Utility App"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btnAlarm"
@@ -76,8 +78,8 @@
         android:background="@drawable/ic_baseline_access_alarm_24"
         android:onClick="clickHandler"
         android:text="alarm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/tvMain" />
 
     <Button
         android:id="@+id/calculator_button"
@@ -85,8 +87,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:layout_marginTop="19dp"
+        android:theme="@style/DefaultButton"
         android:onClick="clickHandler"
         android:text="@string/calculator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAlarm" />
+        android:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@+id/btnAlarm"
+        app:layout_constraintTop_toBottomOf="@+id/tvMain" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnFocusChangeListener {
-    EditText nameEditText; //declaration
+//    EditText nameEditText; //declaration
     Student abdul;  //a ref variable is created on the stack memory
     public static  String TAG = MainActivity.class.getSimpleName();
     //"MainActivity";
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         setContentView(R.layout.activity_main); //inflation
         abdul = new Student("ansari",123,3445); //this will create the object on heap memory
 
-        nameEditText = findViewById(R.id.etName); //initialized it -- getting handle
+//        nameEditText = findViewById(R.id.etName); //initialized it -- getting handle
 
-        nameEditText.setOnFocusChangeListener(this); //this refers to the current instance of this class
+//        nameEditText.setOnFocusChangeListener(this); //this refers to the current instance of this class
 
 //        TextView mTextView = new TextView(this);
 //        mTextView.setText("text from java");
@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
     }
 
     private void startHome() {
-        String value = nameEditText.getText().toString();
+//        String value = nameEditText.getText().toString();
         Intent hIntent = new Intent(this, HomeActivity.class); //explicit intent
-        hIntent.putExtra("namekey",value);
+//        hIntent.putExtra("namekey",value);
         startActivityForResult(hIntent,123); //step 1
         Log.i(TAG, "starting homeactivity");
     }
