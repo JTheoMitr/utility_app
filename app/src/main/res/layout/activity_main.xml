@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/ic_launcher_background"
         android:ems="10"
         android:hint="@string/enter_pw"
         android:inputType="textPassword"
@@ -39,11 +40,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="17dp"
+        android:background="@drawable/ic_baseline_apps_24_light"
         android:onClick="clickHandler"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/btnAlarm"
