@@ -17,25 +17,16 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnFocusChangeListener {
-//    EditText nameEditText; //declaration
-    Student abdul;  //a ref variable is created on the stack memory
+
+    Student john;  //a ref variable is created on the stack memory
     public static  String TAG = MainActivity.class.getSimpleName();
     //"MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //inflation
-        abdul = new Student("ansari",123,3445); //this will create the object on heap memory
+        john = new Student("John Theo",123,3445); //this will create the object on heap memory
 
-//        nameEditText = findViewById(R.id.etName); //initialized it -- getting handle
-
-//        nameEditText.setOnFocusChangeListener(this); //this refers to the current instance of this class
-
-//        TextView mTextView = new TextView(this);
-//        mTextView.setText("text from java");
-//
-//        ConstraintLayout cl = findViewById(R.id.container);
-//        cl.addView(mTextView);
     }
 
     @Override
