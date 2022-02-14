@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/uggcad__2_"
+    android:background="@drawable/black_blue_tech_1"
     tools:context=".HomeActivity">
 
     <TextView

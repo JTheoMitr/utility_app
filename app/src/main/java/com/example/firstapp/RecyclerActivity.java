@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 public class RecyclerActivity extends AppCompatActivity {
-    String[] languages = new String[] {"english","hindi","french","arabic",
-            "english","hindi","french","arabic", "english","hindi","french","arabic",
-            "english","hindi","french","arabic"};
+    String[] languages = new String[] {"English","Hindi","French","Arabic",
+            "Haitian Creole","Spanish","Afrikaans","Bengali", "German","Japanese","Danish","Swahili",
+            "Mandarin","Turkish","Cantonese","Chichewa"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
