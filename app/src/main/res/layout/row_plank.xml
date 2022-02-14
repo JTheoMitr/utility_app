@@ -8,8 +8,8 @@
     <TextView
         android:id="@+id/tvRow"
         android:layout_margin="20dp"
-        android:textSize="20sp"
-        android:textColor="@color/purple_200"
+        android:textSize="25sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -68,15 +68,17 @@ class HomeActivity : AppCompatActivity() {
     fun handleClick(view: android.view.View) {
         when(view.id){
             R.id.btnDial -> {startDialer()}
-            R.id.btnTimer -> {startTimer("milk", 10)}
-            R.id.btnCalendar -> {startCalendar()}
+            R.id.btnTimer -> {startTimer("Tea is Ready", 10)}
+            R.id.btnRecycler -> {startRecycler()}
         }
 
     }
 
-    private fun startCalendar() {
-        var cIntent = Intent("abdul.needs.water")
-        startActivity(cIntent)
+    private fun startRecycler() {
+        val hIntent = Intent(this, RecyclerActivity::class.java) //explicit intent
+
+        startActivityForResult(hIntent, 123)
+        Log.i(TAG, "starting recycler activity")
     }
 
     fun startTimer(message: String, seconds: Int) {
@@ -91,7 +93,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun startDialer() {
-        var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456")) //implicit intent
+        val dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456")) //implicit intent
 
         startActivity(dIntent)
     }

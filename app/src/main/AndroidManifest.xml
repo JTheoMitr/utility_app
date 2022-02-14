@@ -20,7 +20,8 @@
 
         <activity
             android:name=".RecyclerActivity"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:parentActivityName=".HomeActivity"/>
 
         <activity
             android:name=".HomeActivity"
